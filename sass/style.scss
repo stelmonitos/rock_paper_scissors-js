@@ -1,0 +1,86 @@
+/* Resetowanie domyślnych marginesów przeglądarki */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stylowanie całego widoku (tło i centrowanie) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Centrowanie w poziomie */
+    align-items: center;     /* Centrowanie w pionie */
+    color: #333;
+}
+
+/* Główny kontener gry - wyglad "karty" */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Kontener na przyciski */
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Odstęp między przyciskami */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Pozwala przyciskom spaść niżej na małych ekranach */
+}
+
+/* Wspólny styl dla wszystkich przycisków */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Płynna animacja */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efekt najechania myszką (hover) */
+button:hover {
+    transform: translateY(-3px); /* Przycisk unosi się lekko do góry */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efekt kliknięcia (active) */
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Unikalne kolory dla każdego przycisku */
+#rock {
+    background-color: #3498db; /* Niebieski */
+}
+
+#paper {
+    background-color: #2ecc71; /* Zielony */
+}
+
+#scissors {
+    background-color: #e74c3c; /* Czerwony */
+}
+
+/* Stylowanie obszaru wiadomości */
+#messages {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    min-height: 50px; /* Zapobiega skakaniu okna, gdy brak tekstu */
+}
